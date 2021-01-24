@@ -1,0 +1,278 @@
+﻿<UserControl x:Class="QuanLyKhoByPharm.UserControlHome"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:QuanLyKhoByPharm"
+             mc:Ignorable="d"
+             DataContext="{StaticResource HomeVM}"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+                TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+                TextElement.FontWeight="Regular"
+                TextElement.FontSize="13"
+                TextOptions.TextFormattingMode="Ideal"
+                TextOptions.TextRenderingMode="Auto"
+                FontFamily="{DynamicResource MaterialDesignFont}"
+             d:DesignHeight="450" d:DesignWidth="850">
+    <Grid Margin="15,0,0,15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="160"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <!--trang chủ-->
+        <Grid Grid.Row="0" Margin="15">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon
+                    Foreground="Aquamarine"
+                    Kind="Home" 
+                    Height="25" 
+                    Width="25" 
+                    VerticalAlignment="Center"
+                    Margin="20 0 0 0"/>
+                <TextBlock Text="Trang chủ" 
+                           VerticalAlignment="Center"
+                           Foreground="Aquamarine"
+                           FontSize="20"/>
+            </StackPanel>
+        </Grid>
+
+
+        <!--Cảnh báo tồn kho, hết hạn-->
+        <Grid Grid.Row="1">
+            <materialDesign:Card Margin="0,0,5,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <!--Hiển thị tồn kho-->
+                    <Grid Grid.Column="0">
+                        <materialDesign:Card Margin="10">
+                            <Grid Background="#FF0FB8DE">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"
+                                               ></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <TextBlock Text="{Binding TonKho, UpdateSourceTrigger=PropertyChanged}"
+                                           FontSize="30"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="7"
+                                               ></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBlock Text="Tồn Kho"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="10"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <ListView>
+                                        <ListViewItem>
+                                            <StackPanel Orientation="Horizontal"
+                                                Margin="5,0,0,0">
+                                                <TextBlock Text="Chi tiết"
+                                        FontSize="13"
+                                        Foreground="White"
+                                        HorizontalAlignment="Center" 
+                                        Background="{x:Null}"
+                                        Height="22"
+                                        Width="auto">
+                                                </TextBlock>
+                                                <materialDesign:PackIcon 
+                                        Kind="ArrowRightCircle" 
+                                        Margin="7,0,0,0"/>
+                                            </StackPanel>
+                                        </ListViewItem>
+                                    </ListView>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Card>
+                    </Grid>
+                    <!--Hiển thị tồn kho-->
+
+                    <!--Hiển thị tồn kho-->
+                    <Grid Grid.Column="1">
+                        <materialDesign:Card Margin="10">
+                            <Grid Background="#FF15CD3F">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <TextBlock Text="0"
+                                           FontSize="30"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="7"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBlock Text="Thuốc Đã Hết"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="10"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <ListView>
+                                        <ListViewItem>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="5,0,0,0">
+                                                <TextBlock Text="Chi tiết"
+                                            FontSize="13"
+                                            Foreground="White"
+                                            HorizontalAlignment="Center" 
+                                            Background="{x:Null}"
+                                            Height="22"
+                                            Width="auto">
+                                                </TextBlock>
+                                                <materialDesign:PackIcon 
+                                            Kind="ArrowRightCircle" 
+                                            Margin="7,0,0,0"/>
+                                            </StackPanel>
+                                        </ListViewItem>
+                                    </ListView>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Card>
+                    </Grid>
+                    <!--Hiển thị tồn kho-->
+
+                    <!--Hiển thị tồn kho-->
+                    <Grid Grid.Column="2">
+                        <materialDesign:Card Margin="10">
+                            <Grid Background="#FFE48A30">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <TextBlock Text="0"
+                                           FontSize="30"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="7"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBlock Text="Thuốc sắp hết hạn"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="10"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <ListView>
+                                        <ListViewItem>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="5,0,0,0">
+                                                <TextBlock Text="Chi tiết"
+                                            FontSize="13"
+                                            Foreground="White"
+                                            HorizontalAlignment="Center" 
+                                            Background="{x:Null}"
+                                            Height="22"
+                                            Width="auto">
+                                                </TextBlock>
+                                                <materialDesign:PackIcon 
+                                            Kind="ArrowRightCircle" 
+                                            Margin="7,0,0,0"/>
+                                            </StackPanel>
+                                        </ListViewItem>
+                                    </ListView>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Card>
+                    </Grid>
+                    <!--Hiển thị tồn kho-->
+
+                    <!--Hiển thị tồn kho-->
+                    <Grid Grid.Column="3">
+                        <materialDesign:Card Margin="10">
+                            <Grid Background="#FFEE4040">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                    <RowDefinition Height="auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <Grid Grid.Row="0">
+                                    <TextBlock Text="0"
+                                           FontSize="30"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="7"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="1">
+                                    <TextBlock Text="Thuốc đã hết hạn"
+                                           FontSize="20"
+                                           Foreground="White"
+                                           FontWeight="Bold"
+                                           Margin="10"></TextBlock>
+                                </Grid>
+                                <Grid Grid.Row="2">
+                                    <ListView>
+                                        <ListViewItem>
+                                            <StackPanel Orientation="Horizontal"
+                                                    Margin="5,0,0,0">
+                                                <TextBlock Text="Chi tiết"
+                                            FontSize="13"
+                                            Foreground="White"
+                                            HorizontalAlignment="Center" 
+                                            Background="{x:Null}"
+                                            Height="22"
+                                            Width="auto">
+                                                </TextBlock>
+                                                <materialDesign:PackIcon 
+                                            Kind="ArrowRightCircle" 
+                                            Margin="7,0,0,0"/>
+                                            </StackPanel>
+                                        </ListViewItem>
+                                    </ListView>
+                                </Grid>
+                            </Grid>
+                        </materialDesign:Card>
+                    </Grid>
+                    <!--Hiển thị tồn kho-->
+
+                </Grid>
+            </materialDesign:Card>
+        </Grid>
+        <Grid Grid.Row="2" Margin="7">
+            <materialDesign:Card HorizontalAlignment="Right">
+                <WrapPanel>
+                    <Button Command="{Binding Refresh}" Content="Refresh" Margin="5" Width="100"></Button>
+                </WrapPanel>
+            </materialDesign:Card>
+        </Grid>
+        <!--Hiển thị nội dung-->
+        <Grid Grid.Row="3" Margin="15">
+            <materialDesign:Card VerticalAlignment="Stretch">
+                <ListView ItemsSource="{Binding TonKhoList}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding STT}" Header="STT"></GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Object.Displayname}" Header="Tên sản phẩm"></GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Count}" Header="Số lượng"></GridViewColumn>
+                            <GridViewColumn Header="Ngày hết hạn"></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </materialDesign:Card>
+        </Grid>
+    </Grid>
+</UserControl>

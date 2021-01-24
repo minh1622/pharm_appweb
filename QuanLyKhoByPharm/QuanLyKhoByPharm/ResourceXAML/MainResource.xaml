@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodel="clr-namespace:QuanLyKhoByPharm.ViewModel"
+                    xmlns:local="clr-namespace:QuanLyKhoByPharm.ResourceXAML">
+    <viewmodel:MainViewModel x:Key="MainVM"></viewmodel:MainViewModel>
+    <viewmodel:LoginViewModel x:Key="LoginVM"></viewmodel:LoginViewModel>
+    <viewmodel:AccountViewModel x:Key="AccVM"></viewmodel:AccountViewModel>
+    <viewmodel:AddViewModel x:Key="AddVM"></viewmodel:AddViewModel>
+    <viewmodel:HomeViewModel x:Key="HomeVM"></viewmodel:HomeViewModel>
+    <viewmodel:ObjectViewModel x:Key="ObjectVM"></viewmodel:ObjectViewModel>
+    <viewmodel:OutViewModel x:Key="OutVM"></viewmodel:OutViewModel>
+    <viewmodel:ReportViewModel x:Key="RpVM"></viewmodel:ReportViewModel>
+    <viewmodel:UnitViewModel x:Key="UnitVM"></viewmodel:UnitViewModel>
+    <viewmodel:ShowRPViewModel x:Key="ShowRPVM"></viewmodel:ShowRPViewModel>
+    <viewmodel:ShowRP2ViewModel x:Key="ShowRP2VM"></viewmodel:ShowRP2ViewModel>
+</ResourceDictionary>
